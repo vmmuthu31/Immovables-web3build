@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Web3 from "web3";
-import logo from "../logo.png";
 import "./App.css";
 import Marketplace from "../abis/Marketplace.json";
 import Navbar from "./Navbar";
 import Main from "./Main";
+import Home from "./Home";
 
 class App extends Component {
   async componentWillMount() {
@@ -90,8 +90,10 @@ class App extends Component {
     return (
       <div>
         <Navbar account={this.state.account} />
+
+        <Home />
         <div className="container-fluid mt-5">
-          <div className="row">
+          {/*    <div className="row">
             <main role="main" className="col-lg-12 d-flex">
               {this.state.loading ? (
                 <div id="loader" className="text-center">
@@ -105,7 +107,7 @@ class App extends Component {
                 />
               )}
             </main>
-          </div>
+          </div>*/}
         </div>
       </div>
     );

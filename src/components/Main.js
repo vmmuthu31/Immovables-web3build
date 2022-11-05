@@ -5,7 +5,7 @@ class Main extends Component {
   render() {
     return (
       <div id="content">
-        <h1>Add Property</h1>
+        {/*  <h1>Add Property</h1>
         <form
           onSubmit={(event) => {
             event.preventDefault();
@@ -92,7 +92,7 @@ class Main extends Component {
               );
             })}
           </tbody>
-        </table>
+        </table>*/}
       </div>
     );
   }

@@ -74,7 +74,7 @@
   "sourceMap": "72:500:1:-;;;165:52;8:9:-1;5:2;;;30:1;27;20:12;5:2;165:52:1;201:10;193:5;;:18;;;;;;;;;;;;;;;;;;72:500;;;;;;",
   "deployedSourceMap": "72:500:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;72:500:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;401:168;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;401:168:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;122:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;97:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;290:105;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;290:105:1;;;;;;;;;;;;;;;;;:::i;:::-;;401:168;270:5;;;;;;;;;;;256:19;;:10;:19;;;252:26;;;464:19;497:11;464:45;;516:8;:21;;;538:24;;516:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;516:47:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;516:47:1;;;;277:1;252:26;401:168;:::o;122:36::-;;;;:::o;97:20::-;;;;;;;;;;;;;:::o;290:105::-;270:5;;;;;;;;;;;256:19;;:10;:19;;;252:26;;;380:9;353:24;:36;;;;252:26;290:105;:::o",
   "source": "//SPDX-License-Identifier: GPL-3.0\r\npragma solidity >=0.4.21 <0.6.0;\r\n\r\ncontract Migrations {\r\n  address public owner;\r\n  uint public last_completed_migration;\r\n\r\n  constructor() public {\r\n    owner = msg.sender;\r\n  }\r\n\r\n  modifier restricted() {\r\n    if (msg.sender == owner) _;\r\n  }\r\n\r\n  function setCompleted(uint completed) public restricted {\r\n    last_completed_migration = completed;\r\n  }\r\n\r\n  function upgrade(address new_address) public restricted {\r\n    Migrations upgraded = Migrations(new_address);\r\n    upgraded.setCompleted(last_completed_migration);\r\n  }\r\n}\r\n",
-  "sourcePath": "C:\\Users\\mvair\\Downloads\\RealEstate-Marketplace\\src\\contracts\\Migrations.sol",
+  "sourcePath": "C:\\Users\\mvair\\OneDrive\\Documents\\Immovables-web3build\\src\\contracts\\Migrations.sol",
   "ast": {
     "absolutePath": "project:/src/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -1480,8 +1480,7 @@
     }
   },
   "schemaVersion": "3.4.10",
-  "updatedAt": "2022-11-05T05:53:57.247Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-11-05T07:37:16.556Z",
   "devdoc": {
     "methods": {}
   },
