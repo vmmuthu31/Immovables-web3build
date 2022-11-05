@@ -1,0 +1,19 @@
+.table {
+  border-collapse: collapse;
+  margin: 25px e;
+  font-size: 1em;
+  min-width: 400px;
+  border: 0;
+}
+
+.table thead tr {
+  background-color: O#009879;
+  color: 1#ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.buy-btn {
+  border-radius: 10%;
+  border: 0;
+}
