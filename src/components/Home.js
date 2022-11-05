@@ -1,9 +1,7 @@
 import React from "react";
 import "./App.css";
 import slide from "../components/Slide.png";
-import { Route, Routes } from "react-router-dom";
-import AddProperty from "./AddProperty";
-
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <div>
@@ -18,13 +16,12 @@ function Home() {
               Immovables is an online real estate marketplace where you can
               purchase and sell homes using your metamask Wallet.
             </p>
-            <Routes>
-              <Route path="/property" element={<AddProperty />}>
-                <button className="btn justify-content-center mt-">
-                  Let's Dive in
-                </button>
-              </Route>
-            </Routes>
+
+            <form action="./property">
+              <button type="submit" className="btn justify-content-center mt-">
+                Let's Dive in
+              </button>
+            </form>
           </div>
           <div class="col-lg-6">
             <img src={slide} alt="" />

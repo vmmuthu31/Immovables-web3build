@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Web3 from "web3";
 import "./App.css";
 import Marketplace from "../abis/Marketplace.json";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import AddProperty from "./AddProperty";
 import Navbar from "./Navbar";
@@ -67,10 +67,10 @@ class App extends Component {
     this.purchaseProduct = this.purchaseProduct.bind(this);
   }
 
-  createProduct(name, price) {
+  createProduct(name, price, sqfeet) {
     this.setState({ loading: true });
     this.state.marketplace.methods
-      .createProduct(name, price)
+      .createProduct(name, price, sqfeet)
       .send({ from: this.state.account })
       .once("receipt", (receipt) => {
         this.setState({ loading: false });
@@ -92,7 +92,16 @@ class App extends Component {
       <div>
         <Navbar account={this.state.account} />
         <div>
-          <Home />
+          <Router>
+            <Switch>
+              <Route path="/property">
+                <AddProperty />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </Router>
         </div>
       </div>
     );
