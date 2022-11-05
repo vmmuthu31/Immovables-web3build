@@ -1,0 +1,26 @@
+/* Styles go here */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000000 13.97%, #3C0051 58.2%, #650088 80%, #9100C4 99.99%, #BD00FF 100%);
+}
+.container-fluid {
+  color: whitesmoke;
+  font-family: roboto;
+  font-size: 1vw;
+}
+
+.pinkme{
+  color:#BD00FF;
+}
