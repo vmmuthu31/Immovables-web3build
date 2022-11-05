@@ -17,3 +17,12 @@
   border-radius: 10%;
   border: 0;
 }
+
+.white{
+  background: linear-gradient(89.8deg, #EB00FF 16.18%, #0017FF 52.7%, #00F0FF 90.89%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  
+}

@@ -1,52 +1,10 @@
 import React, { Component } from "react";
-
 import "./main.css";
 
-class Main extends Component {
+class BuyProperty extends Component {
   render() {
     return (
-      <div id="content">
-        <h1>Add Property</h1>
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
-            const name = this.productName.value;
-            const price = window.web3.utils.toWei(
-              this.productPrice.value.toString(),
-              "Ether"
-            );
-            this.props.createProduct(name, price);
-          }}
-        >
-          <div className="form-group mr-sm-2">
-            <input
-              id="productName"
-              type="text"
-              ref={(input) => {
-                this.productName = input;
-              }}
-              className="form-control"
-              placeholder="Property Description"
-              required
-            />
-          </div>
-          <div className="form-group mr-sm-2">
-            <input
-              id="productPrice"
-              type="text"
-              ref={(input) => {
-                this.productPrice = input;
-              }}
-              className="form-control"
-              placeholder="Property Price"
-              required
-            />
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Add Property
-          </button>
-        </form>
-        <p>&nbsp;</p>
+      <div>
         <h2>Buy Property</h2>
         <table className="table">
           <thead>
@@ -99,4 +57,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default BuyProperty;

@@ -18,7 +18,7 @@ module.exports = {
       provider: () =>
         new HDWalletProvider(
           mnemonic,
-          `https://crimson-light-silence.matic-testnet.discover.quiknode.pro/d2630dc8c356e88aa1ed1ac1f866299ebf7f1d7f/`
+          `https://polygon-mumbai.gateway.pokt.network/v1/lb/a2a007d2aa9b3b52bd9c08a5`
         ),
       network_id: 80001,
       confirmations: 2,
