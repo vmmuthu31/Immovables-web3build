@@ -55,7 +55,7 @@ class Main extends Component {
               <th scope="col">Name</th>
               <th scope="col">Price</th>
               <th scope="col">Owner</th>
-              <th scope="col"></th>
+              <th scope="col">Status</th>
             </tr>
           </thead>
           <tbody id="productList">
@@ -75,7 +75,7 @@ class Main extends Component {
                   <td>
                     {!product.purchased ? (
                       <button
-                        className="buy-btn"
+                        className="buy-btn btn-primary p-1"
                         name={product.id}
                         value={product.price}
                         onClick={(event) => {
@@ -87,7 +87,21 @@ class Main extends Component {
                       >
                         Buy
                       </button>
-                    ) : null}
+                    ) : (
+                      <button
+                        className="buy-btn btn-danger p-1"
+                        name={product.id}
+                        value={product.price}
+                        onClick={(event) => {
+                          this.props.purchaseProduct(
+                            event.target.name,
+                            event.target.value
+                          );
+                        }}
+                      >
+                        sold
+                      </button>
+                    )}
                   </td>
                 </tr>
               );
