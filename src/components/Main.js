@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Home from "./Home";
 import "./main.css";
 
 class Main extends Component {
@@ -42,7 +41,7 @@ class Main extends Component {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary ">
             Add Property
           </button>
         </form>
@@ -55,6 +54,7 @@ class Main extends Component {
               <th scope="col">Name</th>
               <th scope="col">Price</th>
               <th scope="col">Owner</th>
+              <th scope="col">Status</th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -75,7 +75,7 @@ class Main extends Component {
                   <td>
                     {!product.purchased ? (
                       <button
-                        className="buy-btn"
+                        className="buy-btn btn-primary"
                         name={product.id}
                         value={product.price}
                         onClick={(event) => {
@@ -87,7 +87,16 @@ class Main extends Component {
                       >
                         Buy
                       </button>
-                    ) : null}
+                    ) : (
+                      <button
+                        className="buy-btn btn-danger"
+                        onClick={(e) => {
+                          alert("Sorry Dude, This property has been Sold");
+                        }}
+                      >
+                        Sold
+                      </button>
+                    )}
                   </td>
                 </tr>
               );
