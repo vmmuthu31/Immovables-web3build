@@ -75,7 +75,7 @@ class Main extends Component {
                   <td>
                     {!product.purchased ? (
                       <button
-                        className="buy-btn"
+                        className="buy-btn btn-primary p-1"
                         name={product.id}
                         value={product.price}
                         onClick={(event) => {
@@ -87,7 +87,9 @@ class Main extends Component {
                       >
                         Buy
                       </button>
-                    ) : null}
+                    ) : (
+                      <button className="buy-btn btn-danger p-1">sold</button>
+                    )}
                   </td>
                 </tr>
               );
