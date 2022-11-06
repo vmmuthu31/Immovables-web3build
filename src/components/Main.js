@@ -41,7 +41,7 @@ class Main extends Component {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary ">
             Add Property
           </button>
         </form>
@@ -75,7 +75,7 @@ class Main extends Component {
                   <td>
                     {!product.purchased ? (
                       <button
-                        className="buy-btn btn-primary p-1"
+                        className="buy-btn btn-primary"
                         name={product.id}
                         value={product.price}
                         onClick={(event) => {
@@ -88,7 +88,14 @@ class Main extends Component {
                         Buy
                       </button>
                     ) : (
-                      <button className="buy-btn btn-danger p-1">sold</button>
+                      <button
+                        className="buy-btn btn-danger"
+                        onClick={(e) => {
+                          alert("Sorry Dude, This property has been Sold");
+                        }}
+                      >
+                        Sold
+                      </button>
                     )}
                   </td>
                 </tr>

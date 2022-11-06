@@ -10,7 +10,8 @@
 
 body {
 
-  background: url(background.jpg);
+  background: url(background.jpg) no-repeat;
+  background-size: cover;
 }
 .container-fluid {
   color: whitesmoke;
@@ -36,4 +37,8 @@ font-size: 50px;
   border-radius: 12px;
   padding:16px;
   border: none;
+}
+
+.btn:hover{
+  color:darkkhaki
 }

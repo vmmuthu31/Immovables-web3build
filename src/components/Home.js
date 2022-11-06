@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import slide from "../components/Slide.png";
-import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <div>
@@ -18,7 +18,7 @@ function Home() {
             </p>
 
             <form action="./property">
-              <button type="submit" className="btn justify-content-center mt-">
+              <button type="submit" className="btn justify-content-center">
                 Let's Dive in
               </button>
             </form>

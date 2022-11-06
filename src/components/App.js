@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Web3 from "web3";
 import "./App.css";
 import Marketplace from "../abis/Marketplace.json";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import AddProperty from "./AddProperty";
 import Navbar from "./Navbar";
