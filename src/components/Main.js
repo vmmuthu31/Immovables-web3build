@@ -55,6 +55,7 @@ class Main extends Component {
               <th scope="col">Name</th>
               <th scope="col">Price</th>
               <th scope="col">Owner</th>
+              <th scope="col">Status</th>
               <th scope="col"></th>
             </tr>
           </thead>
