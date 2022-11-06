@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import slide from "../components/Slide.png";
-import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <div>

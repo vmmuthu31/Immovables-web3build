@@ -3,51 +3,57 @@ pragma solidity ^0.5.0;
 
 contract Marketplace {
     string public name;
-    uint public productCount = 0;
-    mapping(uint => Product) public products;
+    uint256 public productCount = 0;
+    mapping(uint256 => Product) public products;
 
     struct Product {
-        uint id;
+        uint256 id;
         string name;
-        uint price;
+        uint256 price;
         address payable owner;
         bool purchased;
     }
 
     event ProductCreated(
-        uint id,
+        uint256 id,
         string name,
-        uint price,
+        uint256 price,
         address payable owner,
         bool purchased
     );
 
     event ProductPurchased(
-        uint id,
+        uint256 id,
         string name,
-        uint price,
+        uint256 price,
         address payable owner,
         bool purchased
     );
 
     constructor() public {
-        name = "Dapp University Marketplace";
+        name = "Immovables-web3build";
     }
 
-    function createProduct(string memory _name, uint _price) public {
+    function createProduct(string memory _name, uint256 _price) public {
         // Require a valid name
         require(bytes(_name).length > 0);
         // Require a valid price
         require(_price > 0);
         // Increment product count
-        productCount ++;
+        productCount++;
         // Create the product
-        products[productCount] = Product(productCount, _name, _price, msg.sender, false);
+        products[productCount] = Product(
+            productCount,
+            _name,
+            _price,
+            msg.sender,
+            false
+        );
         // Trigger an event
         emit ProductCreated(productCount, _name, _price, msg.sender, false);
     }
 
-    function purchaseProduct(uint _id) public payable {
+    function purchaseProduct(uint256 _id) public payable {
         // Fetch the product
         Product memory _product = products[_id];
         // Fetch the owner
@@ -69,6 +75,12 @@ contract Marketplace {
         // Pay the seller by sending them Ether
         address(_seller).transfer(msg.value);
         // Trigger an event
-        emit ProductPurchased(productCount, _product.name, _product.price, msg.sender, true);
+        emit ProductPurchased(
+            productCount,
+            _product.name,
+            _product.price,
+            msg.sender,
+            true
+        );
     }
 }

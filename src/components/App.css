@@ -9,8 +9,8 @@
 }
 
 body {
-
-  background: url(background.jpg);
+  background: url(background.jpg) no-repeat;
+  background-size: cover;
 }
 .container-fluid {
   color: whitesmoke;

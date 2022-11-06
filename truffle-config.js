@@ -1,8 +1,11 @@
 require("babel-register");
 require("babel-polyfill");
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-
-const mnemonic = "6afe740856d8cb15b3cb96b085d1879abb439bf9f10252667187babd9559dc55".trim();
+const fs = require("fs");
+const mnemonic = fs
+  .readFileSync(".secret")
+  .toString()
+  .trim();
 
 module.exports = {
   networks: {
@@ -15,7 +18,7 @@ module.exports = {
       provider: () =>
         new HDWalletProvider(
           mnemonic,
-          `https://polygon-mumbai.gateway.pokt.network/v1/lb/a2a007d2aa9b3b52bd9c08a5`
+          `https://polygon-mumbai.gateway.pokt.network/v1/lb/${process.env.API_KEY}`
         ),
       network_id: 80001,
       confirmations: 2,

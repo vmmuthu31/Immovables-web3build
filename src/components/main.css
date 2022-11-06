@@ -26,10 +26,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
-  
+  text-fill-color: transparent;  
+}
+
+.top-minifier{
+  margin-top: -45px;
 }
 
 #content{
-  margin-top: -75px;
+  margin-top: -105px;
 }

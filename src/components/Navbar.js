@@ -1,13 +1,13 @@
 import { CContainer, CForm, CNavbar } from "@coreui/bootstrap-react";
-
 import React, { Component } from "react";
 import { Nav } from "react-bootstrap";
 import logo from "./logo.png";
+import "./main.css";
 
 class Navbar extends Component {
   render() {
     return (
-      <>
+      <div className="top-minifier">
         <CNavbar colorScheme="light">
           <CContainer fluid>
             <Nav.Link href="/">
@@ -32,7 +32,7 @@ class Navbar extends Component {
             </CForm>
           </CContainer>
         </CNavbar>
-      </>
+      </div>
     );
   }
 }
